@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Get the FAKE Out</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style2.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+	<h1>Get the FAKE Out</h1>
+
+
+     <h3 style="color:red"> This is a FAKE news </h3>
+     <p style="color:red">Related details on similar infamous fake news spreading on social media<br></p>
+     <p style="font-size:13px">
+<!--   {{ prediction_text }}-->
+
+     {% for line in lines %}
+         {{line[0]}}<br/>
+         {{line[1]}}<br>
+         <a href="{{line[2]}}">Know More</a><br><br>
+     {% endfor %}
+     </p>
+     <button type="submit" onclick="window.location.href = 'http://127.0.0.1:1000';" class="btn btn-primary btn-block btn-large">Back</button>
+ </div>
+
+
+</body>
+</html>

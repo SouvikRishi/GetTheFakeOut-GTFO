@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+<!--From https://codepen.io/frytyler/pen/EGdtg-->
+<head>
+  <meta charset="UTF-8">
+  <title>Get the FAKE Out</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+  
+</head>
+
+<body>
+ <div class="login">
+
+	<h1>Get the FAKE Out</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="experience" placeholder="News Source URL" />
+        <input style="height:200px" type="text" name="test_score" placeholder="Enter the news here that you want to verify" required="required" />
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Check Authenticity</button>
+    </form>
+
+   <br>
+   <br>
+
+     <p style="font-size:9px">
+<!--   {{ prediction_text }}-->
+     {% for line in lines %}
+        {{line|urlize(40,true)}}<br>
+     {% endfor %}
+     </p>
+ </div>
+
+
+</body>
+</html>
