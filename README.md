@@ -1,5 +1,5 @@
 # GetTheFakeOut-GTFO
-A COVID-19 related fake news identifier 
+A webapp and chrome extension for COVID-19 related fake news identifier 
 
 ## Inspiration
 The current increase of fake news in times of a global pandemic instills fear and tension amongst the normal people. So, we came up an user friendly, easy to install chrome extension where you just copy and paste the text from a website and it returns you, whether the news is fake or not in no time.
